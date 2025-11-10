@@ -64,7 +64,7 @@ CREATE TABLE Products
   Product_Name VARCHAR(100) NOT NULL,
   Price INT NOT NULL,
   Stock_Quantity FLOAT NOT NULL,
-  Description VARCHAR(500) NOT NULL,
+  Description VARCHAR(500),
   Category_ID INT NOT NULL,
   PRIMARY KEY (Product_ID),
   FOREIGN KEY (Category_ID) REFERENCES Category(Category_ID)
@@ -74,6 +74,7 @@ CREATE TABLE Transaction_Detail
 (
   Quantity FLOAT NOT NULL,
   Subtotal INT NOT NULL,
+  Unit_Price INT NOT NULL,
   Product_ID INT NOT NULL,
   Transaction_ID INT NOT NULL,
   FOREIGN KEY (Product_ID) REFERENCES Products(Product_ID),
@@ -83,7 +84,8 @@ CREATE TABLE Transaction_Detail
 CREATE TABLE Purchase_Detail
 (
   Quantity FLOAT NOT NULL,
-  Cost INT NOT NULL,
+  Unit_Cost INT NOT NULL,
+  SubTotal INT NOT NULL,
   Purchase_ID INT NOT NULL,
   Product_ID INT NOT NULL,
   FOREIGN KEY (Purchase_ID) REFERENCES Purchase(Purchase_ID),
