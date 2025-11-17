@@ -1,13 +1,13 @@
 CREATE TABLE Category
 (
-  Category_ID INT NOT NULL,
+  Category_ID INT NOT NULL AUTO_INCREMENT,
   Category_Name VARCHAR(100) NOT NULL,
   PRIMARY KEY (Category_ID)
 );
 
 CREATE TABLE Customer
 (
-  Customer_ID INT NOT NULL,
+  Customer_ID INT NOT NULL AUTO_INCREMENT,
   Name VARCHAR(100),
   Phone INT,
   Email VARCHAR(100),
@@ -17,7 +17,7 @@ CREATE TABLE Customer
 
 CREATE TABLE User
 (
-  User_ID INT NOT NULL,
+  User_ID INT NOT NULL AUTO_INCREMENT,
   Username VARCHAR(50) NOT NULL,
   Password VARCHAR(15) NOT NULL,
   Role VARCHAR(20) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE User
 
 CREATE TABLE Transaction
 (
-  Transaction_ID INT NOT NULL,
+  Transaction_ID INT NOT NULL AUTO_INCREMENT,
   Date DATE NOT NULL,
   Total_Amount INT NOT NULL,
   Customer_ID INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE Transaction
 
 CREATE TABLE Supplier
 (
-  Supplier_ID INT NOT NULL,
+  Supplier_ID INT NOT NULL AUTO_INCREMENT,
   Name VARCHAR(100) NOT NULL,
   Contact VARCHAR(100) NOT NULL,
   Address VARCHAR(500) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE Supplier
 
 CREATE TABLE Purchase
 (
-  Purchase_ID INT NOT NULL,
+  Purchase_ID INT NOT NULL AUTO_INCREMENT,
   Date DATE NOT NULL,
   Total_Cost INT NOT NULL,
   Supplier_ID INT NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE Purchase
 
 CREATE TABLE Products
 (
-  Product_ID INT NOT NULL,
+  Product_ID INT NOT NULL AUTO_INCREMENT,
   Product_Name VARCHAR(100) NOT NULL,
   Price INT NOT NULL,
   Stock_Quantity FLOAT NOT NULL,
